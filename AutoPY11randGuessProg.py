@@ -6,9 +6,18 @@ playerName = input()
 print('Welcome ' + playerName + '! Let\'s play a guess game.')
 randomNum = random.randint(0, 10)
 print('I am thinking about number between 0 and 10. You have 5 attempts. Try to guess which one. Check you intuition ;)')
-guessOne = input()
-i = 0
-while randomNum != guessOne and i < 5:
-    print('Nope')
-print('That is correct! Brilliant. You are mindreader or rather memory reader!')
+i = 1
+while i < 6:
+    print('Take a guess')
+    guessOne = input()
+    if int(guessOne) == randomNum:
+        print('You won! Correct! It is numner ' + str(guessOne) + '. You guessed my number in ' + str(i) + ' attempts. Maybe you should try a national lottery?')
+        exit(0)
+    if int(guessOne) < randomNum:
+        i = i + 1
+        print('Your guess is too low.')
+    if int(guessOne) > randomNum:
+        i = i + 1
+        print('Your guess is too high.')
+print('5 attempts were used. But you can try again.')
 exit()
