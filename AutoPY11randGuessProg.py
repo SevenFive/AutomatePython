@@ -7,18 +7,25 @@ playerName = input()
 print('Welcome ' + playerName + '! Let\'s play a guess game.')
 randomNum = random.randint(0, 10)
 print('I am thinking about number between 0 and 10. You have 5 attempts. Try to guess which one. Check you intuition ;)')
-i = 1   # alternatively none
+i = 1   # alternatively replaced by range
 while i < 6:    # alternatively "for guessesTaken in range(1, 6):"
     print('Take a guess')
-    guessOne = input()
-    if int(guessOne) == randomNum:  # alternatively move this block out of while loop with correct/incorrect options
-        print('You won! Correct! It is numner ' + str(guessOne) + '. You guessed my number in ' + str(i) + ' attempts. Maybe you should try a national lottery?')
-        exit(0) # alternatively "break"
-    if int(guessOne) < randomNum:
-        i = i + 1
-        print('Your guess is too low.')
-    if int(guessOne) > randomNum:
-        i = i + 1
-        print('Your guess is too high.')
+    guessOne = input()  #alt "guessOne = str(input())
+    try:
+        if int(guessOne) == randomNum:  # alternatively move this block out of while loop with correct/incorrect options
+            print('You won! Correct! It is numner ' + str(guessOne) + '. You guessed my number in ' + str(i) + ' attempts. Maybe you should try a national lottery?')
+            exit(0) # alternatively "break"
+        if int(guessOne) < randomNum:
+            i = i + 1
+            print('Your guess is too low.')
+        if int(guessOne) > randomNum:
+            i = i + 1
+            print('Your guess is too high.')
+    except ValueError:
+        print('Please make sure that you enter a number only. Try again.')
+        exit()
+    except:
+        print('Something went wrong! Ofc we gonna ignore that. Show must go on! Try again.')
+        exit()
 print('5 attempts were used. But you can try again.')   # alt "if guessOne == randomNum: .... else: print try again.
-exit()
+# alt to display number of attempts just use "print(str(guessesTaken)"
