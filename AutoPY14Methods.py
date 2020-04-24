@@ -9,4 +9,14 @@
 #   sort(reverse=True) keyword argument can sort in reverse order
 # Sorting is in ASCII-betical order to bypass it sort(key=str.lower)
 
-# code will be added later
+countries = ['Spain', 'USA', 'France', 'Austria', 'Canada', 'China', 'Bulgaria']
+print(countries)
+print(countries.index('Canada'))
+countries.append('UAR')
+print(countries)
+countries.insert(1, 'Bolivia')
+print(countries)
+countries.remove('Canada')
+print(countries)
+countries.sort()
+print(countries)
