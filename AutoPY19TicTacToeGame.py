@@ -12,4 +12,4 @@ def printBoard(board):
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 printBoard(theBoard)
 
-# current version is meant to be played in console IDE
+# current version is meant to be played in interactive IDE shell only
