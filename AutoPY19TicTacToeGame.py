@@ -12,8 +12,4 @@ def printBoard(board):
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 printBoard(theBoard)
 
-# "type()" can be used to check data type of the var
-print(type(23))
-print(type('dk43df'))
-print(type(3.14))
-print(type(theBoard))
+# current version is meant to be played in console IDE
