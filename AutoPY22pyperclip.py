@@ -6,3 +6,5 @@
 import pyperclip
 pyperclip.copy('Hello! It is supposed to copied to clipboard now!')
 print(pyperclip.paste())
+
+# FYI It's already covered in 'AutoPY6funcPyperclip.py'
